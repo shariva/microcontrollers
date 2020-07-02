@@ -1,0 +1,5 @@
+ORG 0000H
+	MOV 31H,#7FH
+	MOV A,31H
+END
+		

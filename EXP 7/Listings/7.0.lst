@@ -1,0 +1,29 @@
+A51 MACRO ASSEMBLER  7_0                                                                  01/29/2019 17:29:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\7.0.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 7.0.asm SET(SMALL) DEBUG PRINT(.\Listings\7.0.lst) OBJECT(.\Objects\7.0
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 754010            2             MOV 40H,#10H
+0003 7840              3             MOV R0,#40H
+0005 E6                4             MOV A,@R0
+*** WARNING #A41 IN 4 (7.0.asm, LINE 4): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  7_0                                                                  01/29/2019 17:29:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

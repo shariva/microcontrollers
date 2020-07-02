@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  9                                                                    02/12/2019 15:49:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\9.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 9.asm SET(SMALL) DEBUG PRINT(.\Listings\9.lst) OBJECT(.\Objects\9.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 901000            2             MOV DPTR,#1000H
+0003 7411              3             MOV A,#11H
+0005 75F005            4             MOV B,#05H
+0008 F0                5     LOOP: MOVX @DPTR,A
+0009 04                6           INC A
+000A A3                7               INC DPTR
+000B D5F0FA            8               DJNZ B,LOOP
+                       9     
+000E 901000           10             MOV DPTR,#1000H
+0011 75F005           11             MOV B,#05H
+0014 7830             12             MOV R0,#30H
+                      13     
+0016 E0               14     POOL: MOVX A,@DPTR
+0017 F6               15           MOV @R0,A
+0018 08               16               INC R0
+0019 A3               17               INC DPTR
+001A D5F0F9           18               DJNZ B,POOL
+                      19               
+                      20     END
+A51 MACRO ASSEMBLER  9                                                                    02/12/2019 15:49:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP . . . . . . .  C ADDR   0008H   A   
+POOL . . . . . . .  C ADDR   0016H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

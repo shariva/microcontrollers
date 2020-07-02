@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  INTRO123                                                             01/22/2019 03:32:32 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\INTRO123.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE INTRO123.asm SET(SMALL) DEBUG PRINT(.\Listings\INTRO123.lst) OBJECT(.\O
+                      bjects\INTRO123.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+                       2     
+0000 7805              3     MOV R0,#05H
+0002 7902              4     MOV R1,#02H
+0004 7A03              5     MOV R2,#03H
+0006 7B04              6     MOV R3,#04H
+0008 7C05              7     MOV R4,#05H
+000A 7D06              8     MOV R5,#06H
+000C 7E07              9     MOV R6,#07H
+000E 7F08             10     MOV R7,#08H
+                      11     ;MOV A,@R7 HERE, WE CAN USE ONLY @R1 OR @R0...SO DON'T USE ANY OTHER REGS
+                      12     ;MOV R0,R1 IS NOT DEFINED COZ THEY ARE OF THE SAME BANKS SO THERE IS NO POINT IN TRANSFERRI
+                             NG THEM TO EACH OTHER
+                      13     END
+                                     
+                             ;BACK: 
+                             ;ADD A,R0
+                             ;DJNZ R0,BACK
+                             
+A51 MACRO ASSEMBLER  INTRO123                                                             01/22/2019 03:32:32 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

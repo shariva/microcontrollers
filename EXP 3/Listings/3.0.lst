@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  3_0                                                                  01/29/2019 17:09:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\3.0.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 3.0.asm SET(SMALL) DEBUG PRINT(.\Listings\3.0.lst) OBJECT(.\Objects\3.0
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 D2D3              2             SETB PSW.3
+0002 7407              3             MOV A,#07H
+0004 75F008            4             MOV B,#08H
+0007 780F              5             MOV R0,#0FH
+0009                   6     LOOP:
+0009 F6                7             MOV @R0,A
+000A 14                8             DEC A
+000B 18                9             DEC R0
+000C D5F0FA           10     DJNZ B,LOOP
+000F 7800             11     MOV R0,#00H
+                      12     END;
+                                     
+A51 MACRO ASSEMBLER  3_0                                                                  01/29/2019 17:09:03 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+LOOP . . . . . . .  C ADDR   0009H   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

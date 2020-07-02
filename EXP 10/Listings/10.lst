@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  10                                                                   02/12/2019 17:19:30 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\10.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 10.asm SET(SMALL) DEBUG PRINT(.\Listings\10.lst) OBJECT(.\Objects\10.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 901000            2             MOV DPTR,#1000H
+0003 75F00A            3             MOV B,#0AH
+0006 7400              4             MOV A,#00H
+0008 7830              5             MOV R0,#30H
+                       6      
+000A E0                7     POOL: MOVX A,@DPTR
+000B F6                8               MOV @R0,A
+000C A3                9               INC DPTR
+000D 08               10               INC R0
+000E D5F0F9           11               DJNZ B,POOL
+                      12               
+0011 7830             13               MOV R0,#30H
+0013 75F00A           14               MOV B,#0AH
+0016 7400             15               MOV A,#00H
+                      16     
+0018 26               17     SUM: ADD A,@R0
+0019 08               18              INC R0
+001A D5F0FB           19              DJNZ B,SUM
+                      20     
+001D 90100A           21             MOV DPTR,#100AH
+0020 F0               22             MOVX @DPTR,A
+                      23             
+                      24             END
+A51 MACRO ASSEMBLER  10                                                                   02/12/2019 17:19:30 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+POOL . . . . . . .  C ADDR   000AH   A   
+SUM. . . . . . . .  C ADDR   0018H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
